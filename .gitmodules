@@ -1,0 +1,9 @@
+[submodule "nvim"]
+	path = nvim
+	url = git@github.com:dalmamad/nvim.git
+[submodule "i3wm"]
+	path = i3wm
+	url = git@github.com:dalmamad/i3wm.git
+[submodule "hyprland"]
+	path = hyprland
+	url = git@github.com:dalmamad/hyprland.git

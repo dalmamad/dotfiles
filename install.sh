@@ -10,7 +10,6 @@ sudo usermod -aG video $USER
 
 #installing file manager
 sudo pacman -S thunar
-sudo pacman -S ranger
 
 #installing editor
 sudo pacman -S neovim
@@ -31,7 +30,7 @@ sudo pacman -S docker docker-compose
 # sudo systemctl start docker.service 
 
 #installing video player
-sudo pacman -S mpv 
+sudo pacman -S vlc
 
 #installing browser
 yay -S brave-bin

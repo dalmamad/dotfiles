@@ -8,6 +8,10 @@ yay -S ttf-hack-nerd sct xkb-switch-i3 arc-x-icons-theme
 sudo pacman -S light
 sudo usermod -aG video $USER
 
+# installing display manager
+sudo pacman -S sddm
+# sudo systemctl enable sddm.service 
+
 #installing file manager
 sudo pacman -S thunar
 

@@ -14,7 +14,7 @@ link_modules(){
 
 
   # Check if the symbolic link already exists
-  if [ -L "$destination_dir/$link_name" ]; then
+  if [ -e "$destination_dir/$link_name" ]; then
     # Remove the existing symbolic link
     rm -rf "$destination_dir/$link_name"
     echo "Existing symbolic link for $link_name removed."
@@ -32,6 +32,11 @@ link_modules "i3wm/picom" "$HOME/.config"
 link_modules "i3wm/rofi" "$HOME/.config"
 link_modules "i3wm/dunst" "$HOME/.config"
 link_modules "i3wm/xprofile/.xprofile" "$HOME"
+
+# hyprland
+link_modules "hyprland/hypr" "$HOME/.config"
+link_modules "hyprland/waybar" "$HOME/.config"
+link_modules "hyprland/wofi" "$HOME/.config"
 
 ## nvim
 link_modules "nvim" "$HOME/.config"

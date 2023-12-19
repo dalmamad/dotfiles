@@ -2,15 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-#X options (this is temp and should be remove)
-setxkbmap -layout us,ir
-setxkbmap -option "shift:both_capslock_cancel"
-setxkbmap -option altwin:swap_lalt_lwin
-setxkbmap -option ctrl:nocaps
-xcape -e 'Control_L=Escape'
-xinput set-prop "DLL077C:00 06CB:7E92 Touchpad" "libinput Natural Scrolling Enabled" 1
-
-
 # set to vi mode
 set -o vi
 

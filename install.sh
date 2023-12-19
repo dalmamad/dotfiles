@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # installing basics
-sudo pacman -S git sed xautolock i3lock power-profiles-daemon dunst xclip picom rofi polybar lazygit alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
+sudo pacman -S wofi waybar git sed xautolock i3lock power-profiles-daemon dunst xclip picom rofi polybar lazygit alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
 yay -S ttf-hack-nerd sct xkb-switch-i3 arc-x-icons-theme 
 
 # changing brightness
@@ -38,6 +38,16 @@ sudo pacman -S vlc
 
 #installing browser
 yay -S brave-bin
+
+# installing keyd
+git clone https://github.com/rvaiya/keyd
+cd keyd
+make && sudo make install
+sudo cp ./tools/keyd/default.conf /etc/keyd/
+sudo systemctl enable keyd && sudo systemctl start keyd
+
+# to prevent xrog option reset after udev reload
+# sudo touch /etc/systemd/do-not-udevadm-trigger-on-update
 
 #appling symbolink for modules
 ./link-modules.sh

@@ -40,9 +40,8 @@ sudo pacman -S vlc
 yay -S brave-bin
 
 # installing keyd
-git clone https://github.com/rvaiya/keyd
-cd keyd
-make && sudo make install
+git clone https://github.com/rvaiya/keyd ~/keyd
+make -C ~/keyd && sudo make install -C ~/keyd
 sudo cp ./tools/keyd/default.conf /etc/keyd/
 sudo systemctl enable keyd && sudo systemctl start keyd
 

@@ -33,15 +33,16 @@ link_modules "i3wm/rofi" "$HOME/.config"
 link_modules "i3wm/dunst" "$HOME/.config"
 link_modules "i3wm/xprofile/.xprofile" "$HOME"
 
-# hyprland
+## hyprland
 link_modules "hyprland/hypr" "$HOME/.config"
 link_modules "hyprland/waybar" "$HOME/.config"
 link_modules "hyprland/wofi" "$HOME/.config"
+link_modules "hyprland/mako" "$HOME/.config"
 
 ## nvim
 link_modules "nvim" "$HOME/.config"
 
 ## tools
-link_modules "tools/alacritty/alacritty.yml" "$HOME/.config"
+link_modules "tools/alacritty/alacritty.toml" "$HOME/.config"
 link_modules "tools/lazygit" "$HOME/.config"
 link_modules "tools/bashrc/.bashrc" "$HOME"

@@ -1,8 +1,12 @@
 #!/bin/bash
 
 # installing basics
-sudo pacman -S wofi waybar git sed xautolock i3lock power-profiles-daemon dunst xclip picom rofi polybar lazygit alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
-yay -S ttf-hack-nerd sct xkb-switch-i3 arc-x-icons-theme 
+sudo pacman -S cliphist slurp grim swayidle polkit-kde-agent pipewire wireplumber qt5-wayland qt6-wayland wofi blueman waybar git go sed xautolock i3lock power-profiles-daemon dunst xclip picom rofi polybar lazygit alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
+yay -S yay -S satty-bin swaylock-effects-git ttf-hack-nerd sct xkb-switch-i3 arc-x-icons-theme 
+# for wayland there are some must have(which i have added them to list above but for more information):
+# https://wiki.hyprland.org/Useful-Utilities/Must-have/
+# also this tools are also useful:
+# https://github.com/hyprland-community/awesome-hyprland
 
 # changing brightness
 sudo pacman -S light

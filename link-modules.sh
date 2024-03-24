@@ -45,4 +45,5 @@ link_modules "nvim" "$HOME/.config"
 ## tools
 link_modules "tools/alacritty/alacritty.toml" "$HOME/.config"
 link_modules "tools/lazygit" "$HOME/.config"
+link_modules "tools/foot" "$HOME/.config"
 link_modules "tools/bashrc/.bashrc" "$HOME"

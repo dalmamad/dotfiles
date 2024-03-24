@@ -2,7 +2,7 @@
 
 # installing basics
 sudo pacman -S cliphist slurp grim swayidle polkit-kde-agent pipewire wireplumber qt5-wayland qt6-wayland wofi blueman waybar git go sed xautolock i3lock power-profiles-daemon dunst xclip picom rofi polybar lazygit alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
-yay -S yay -S satty-bin swaylock-effects-git ttf-hack-nerd sct xkb-switch-i3 arc-x-icons-theme 
+yay -S yay -S satty-bin swaylock-effects-git ttf-hack-nerd sct xkb-switch-i3 arc-x-icons-theme keyd-git
 # for wayland there are some must have(which i have added them to list above but for more information):
 # https://wiki.hyprland.org/Useful-Utilities/Must-have/
 # also this tools are also useful:
@@ -16,10 +16,10 @@ sudo usermod -aG video $USER
 sudo pacman -S sddm
 # sudo systemctl enable sddm.service 
 
-#installing file manager
+# installing file manager
 sudo pacman -S thunar
 
-#installing editor
+# installing editor
 sudo pacman -S neovim
 
 # installing databases
@@ -32,21 +32,18 @@ sudo pacman -S postgresql
 sudo systemctl start postgresql.service 
 sudo -u postgres initdb -D /var/lib/postgres/data
 
-#installing docker
+# installing docker
 sudo pacman -S docker docker-compose
 # sudo systemctl enable docker.service 
 # sudo systemctl start docker.service 
 
-#installing video player
+# installing video player
 sudo pacman -S vlc
 
-#installing browser
+# installing browser
 yay -S brave-bin
 
-# installing keyd
-git clone https://github.com/rvaiya/keyd ~/keyd
-make -C ~/keyd && sudo make install -C ~/keyd
-sudo cp ./tools/keyd/default.conf /etc/keyd/
+# activating keyd
 sudo systemctl enable keyd && sudo systemctl start keyd
 
 # to prevent xrog option reset after udev reload
@@ -54,3 +51,6 @@ sudo systemctl enable keyd && sudo systemctl start keyd
 
 #appling symbolink for modules
 ./link-modules.sh
+
+
+# remember to add keyd config to config

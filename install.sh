@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # installing basics
-sudo pacman -S git dunst stow xclip picom rofi polybar lazygit alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
-yay -S ttf-hack-nerd sct xkb-switch-i3
+sudo pacman -S git sed xautolock i3lock power-profiles-daemon dunst stow xclip picom rofi polybar lazygit alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
+yay -S ttf-hack-nerd sct xkb-switch-i3 arc-x-icons-theme 
 
 # changing brightness
 sudo pacman -S light

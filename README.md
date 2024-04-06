@@ -14,7 +14,7 @@ this is my .dotfile repository. you can download it all or just pick a config yo
 1. clone repository:
 
 ```bash
-git clone https://github.com/dalmamad/dotfiles.git
+git clone https://github.com/dalmamad/dotfiles-old.git
 ```
 
 2. change directory to the repo:

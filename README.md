@@ -1,5 +1,7 @@
 # Dotfiles
 
+this is my .dotfile repository for both i3wm and hyprland.
+
 ## Hyprland
 
 <p align="center">
@@ -14,11 +16,9 @@
     <img src="./screenshots/i3-2.png" width="300"/>
 </p>
 
-this is my .dotfile repository for both i3wm and hyprland.
-
 # Install
 
-`install.sh` file is written for arch base distros. but you can take a look at it and download necessary packages for your distro.
+> this installation script is made for arch linux and is using pacman to install packages. also i'm using endevour os so you may need to install some of the packages that are installed in endevour os by default like graphic drivers if you are using vanilla arch for example.
 
 1. clone repository:
 

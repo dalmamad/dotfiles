@@ -1,0 +1,20 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/mamad/dotfiles
+- /home/mamad/code/work/loan-backend
+- /home/mamad/dotfiles-old
+- /home/mamad/dotfiles/hyprland
+- /home/mamad/dotfiles/i3wm
+- /home/mamad/dotfiles/nvim
+- /home/mamad/code/personal/snake-py
+- /home/mamad/notes
+startuppopupversion: 5
+lastversion: 0.41.0
+customcommandshistory: []
+hidecommandlog: false
+ignorewhitespaceindiffview: true
+diffcontextsize: 3
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: when-maximised

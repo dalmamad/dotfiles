@@ -10,18 +10,20 @@ get_link_name(){
 link_modules(){
   local link_source=$1
   local destination_dir=$2
+  local current_dir=$(realpath $(dirname "$0"))
   local link_name=$(get_link_name $link_source)
 
 
   # Check if the symbolic link already exists
-  if [ -e "$destination_dir/$link_name" ]; then
+  if [ -e "$destination_dir/$link_name" ] || [ -L "$destination_dir/$link_name" ]; then
     # Remove the existing symbolic link
-    rm -rf "$destination_dir/$link_name"
+    sudo rm -rf "$destination_dir/$link_name"
     echo "Existing symbolic link for $link_name removed."
   fi
 
 # Create the new symbolic link
-ln -s "$(pwd)/$link_source" "$destination_dir/"
+echo "$current_dir"
+sudo ln -s "$current_dir/$link_source" "$destination_dir/"
 echo "Symbolic link for $link_source created."
 }
 
@@ -43,10 +45,10 @@ link_modules "hyprland/mako" "$HOME/.config"
 link_modules "nvim" "$HOME/.config"
 
 ## tools
-link_modules "tools/alacritty/alacritty.toml" "$HOME/.config"
-link_modules "tools/lazygit" "$HOME/.config"
-link_modules "tools/foot" "$HOME/.config"
-link_modules "tools/bashrc/.bashrc" "$HOME"
-link_modules "tools/zsh/.zshrc" "$HOME"
-link_modules "tools/tmux/.tmux.conf" "$HOME"
-link_modules "tools/keyd/default.conf" "/etc/keyd"
+link_modules "alacritty/alacritty.toml" "$HOME/.config"
+link_modules "lazygit" "$HOME/.config"
+link_modules "foot" "$HOME/.config"
+link_modules "bashrc/.bashrc" "$HOME"
+link_modules "zsh/.zshrc" "$HOME"
+link_modules "tmux/.tmux.conf" "$HOME"
+link_modules "keyd/default.conf" "/etc/keyd"

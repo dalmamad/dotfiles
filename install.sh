@@ -5,7 +5,7 @@ sudo pacman -S pipewire wireplumber go sed lazygit nodejs npm ripgrep ttf-hack-n
 yay -S arc-x-icons-theme
 
 # i3wm
-sudo pacman -S dunst alacritty xclip picom rofi polybar feh maim xdotool xcape blueberry flameshot conky xss-lock xautolock i3lock power-profiles-daemon xfce4-power-manager light
+sudo pacman -S dunst alacritty xclip picom rofi polybar feh maim xdotool xcape blueberry flameshot conky xss-lock xautolock i3lock power-profiles-daemon xfce4-power-manager light i3status-rust
 yay -S sct xkb-switch-i3 
 # need this for light package
 sudo usermod -aG video $USER

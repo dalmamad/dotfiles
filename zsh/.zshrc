@@ -4,8 +4,8 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
 
 # Prompt for spelling correction of commands.
-setopt CORRECT
-SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+# setopt CORRECT
+# SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
@@ -40,6 +40,7 @@ PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 bindkey -v
 bindkey "^H" backward-delete-char
 bindkey "^?" backward-delete-char
+bindkey "^w" backward-kill-word
 
 zmodload zsh/complist
 bindkey -M menuselect '^h' vi-backward-char

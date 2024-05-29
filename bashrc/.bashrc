@@ -146,3 +146,9 @@ export EDITOR="nvim"
 # setxkbmap -option altwin:swap_lalt_lwin
 # changing Capslock with Esc
 # setxkbmap -option caps:swapescape
+
+[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
+
+if [ -f /usr/share/nnn/quitcd/quitcd.bash_sh_zsh ]; then
+      source /usr/share/nnn/quitcd/quitcd.bash_sh_zsh
+fi

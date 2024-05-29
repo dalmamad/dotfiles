@@ -19,7 +19,6 @@ compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-
 ##################
 ##### Prompt #####
 ##################
@@ -72,6 +71,9 @@ bindkey '^o' clear-screen
 alias j='z'
 alias f='zi'
 alias g='lazygit'
+alias x='exit'
+alias nv='nvim'
+alias btl='bluetoothctl'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
 
@@ -119,3 +121,8 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	# echo 'Other OS'
 	;;
 esac
+
+lf () {
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    cd "$(command lf -print-last-dir "$@")"
+}

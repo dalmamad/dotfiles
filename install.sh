@@ -1,13 +1,13 @@
 #!/bin/bash
 
 #basic
-sudo pacman -S pipewire wireplumber go sed lazygit nodejs npm ripgrep ttf-hack-nerd keyd-git
+# jq & tidy are used in rest.nvim plugin
+sudo pacman -S pipewire wireplumber go sed lazygit nodejs npm ripgrep ttf-hack-nerd tidy jq
 yay -S arc-x-icons-theme
 
 # i3wm
 sudo pacman -S dunst alacritty xclip picom rofi polybar feh maim xdotool xcape blueberry flameshot conky xss-lock xautolock i3lock power-profiles-daemon xfce4-power-manager light i3status-rust
-yay -S sct xkb-switch-i3 
-# need this for light package
+yay -S sct xkb-switch-i3 # need this for light package
 sudo usermod -aG video $USER
 
 # hyprland
@@ -23,9 +23,13 @@ sudo pacman -S zsh
 zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 sudo chsh -s $(which zsh)
 
+# cli file manager
+yay -S lf
+
 # tmux
 sudo pacman -S tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
 
 # installing display manager
 sudo pacman -S sddm
@@ -58,7 +62,8 @@ sudo pacman -S vlc
 # installing browser
 yay -S brave-bin
 
-# activating keyd
+# keyd
+sudo pacman -S keyd
 sudo systemctl enable keyd && sudo systemctl start keyd
 
 # to prevent xrog option reset after udev reload

@@ -1,11 +1,11 @@
 lastupdatecheck: 0
 recentrepos:
     - /home/mamad/dotfiles
-    - /home/mamad/dotfiles/hyprland
-    - /home/mamad/dotfiles/i3wm
     - /home/mamad/dotfiles/nvim
-    - /home/mamad/code/work/loan-backend
-    - /home/mamad/dotfiles-old
+    - /home/mamad/dotfiles/i3wm
+    - /home/mamad/dotfiles/hyprland
+    - /home/mamad/code/personal/test
+    - /home/mamad/code/personal/test/sub-test
     - /home/mamad/code/personal/snake-py
     - /home/mamad/notes
 startuppopupversion: 5

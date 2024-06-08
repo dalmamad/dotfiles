@@ -13,6 +13,12 @@ WORDCHARS=${WORDCHARS//[\/]}
 # Decrease delay on key press
 KEYTIMEOUT=1
 
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
@@ -73,6 +79,7 @@ alias f='zi'
 alias g='lazygit'
 alias x='exit'
 alias nv='nvim'
+alias hs='history 1 | fzf'
 alias btl='bluetoothctl'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'

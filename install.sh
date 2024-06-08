@@ -6,12 +6,12 @@ sudo pacman -S pipewire wireplumber go sed lazygit nodejs npm ripgrep ttf-hack-n
 yay -S arc-x-icons-theme
 
 # i3wm
-sudo pacman -S dunst alacritty xclip picom rofi polybar feh maim xdotool xcape blueberry flameshot conky xss-lock xautolock i3lock power-profiles-daemon xfce4-power-manager light i3status-rust
+sudo pacman -S i3-wm networkmanager network-manager-applet brightnessctl i3status dunst alacritty xclip picom rofi polybar feh maim xdotool xcape blueberry flameshot conky xss-lock xautolock i3lock power-profiles-daemon xfce4-power-manager i3status-rust
 yay -S sct xkb-switch-i3 # need this for light package
 sudo usermod -aG video $USER
 
 # hyprland
-sudo pacman -S cliphist slurp grim swayidle polkit-kde-agent qt5-wayland qt6-wayland wofi blueman waybar foot
+sudo pacman -S hyprland cliphist slurp grim swayidle polkit-kde-agent qt5-wayland qt6-wayland wofi blueman waybar foot
 yay -S satty-bin swaylock-effects-git
 # for wayland there are some must have(which i have added them to list above but for more information):
 # https://wiki.hyprland.org/Useful-Utilities/Must-have/
@@ -21,7 +21,7 @@ yay -S satty-bin swaylock-effects-git
 # zsh
 sudo pacman -S zsh
 zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
-sudo chsh -s $(which zsh)
+chsh -s $(which zsh)
 
 # cli file manager
 yay -S lf

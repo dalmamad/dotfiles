@@ -13,7 +13,7 @@ lastversion: 0.42.0
 customcommandshistory: []
 hidecommandlog: false
 ignorewhitespaceindiffview: true
-diffcontextsize: 3
+diffcontextsize: 4
 localbranchsortorder: recency
 remotebranchsortorder: alphabetical
 gitlogorder: topo-order

@@ -1,9 +1,9 @@
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com:dalmamad/nvim.git
+	url = ../nvim.git
 [submodule "i3wm"]
 	path = i3wm
-	url = https://github.com:dalmamad/i3wm.git
+	url = ../i3wm.git
 [submodule "hyprland"]
 	path = hyprland
-	url = https://github.com:dalmamad/hyprland.git
+	url = ../hyprland.git

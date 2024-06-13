@@ -34,8 +34,7 @@ map x $$f
 map X !$f
 
 # dedicated keys for file opener actions
-# map o &mimeopen $f
-# map O $mimeopen --ask $f
+map o $mimeopen --ask $f
 
 # define a custom 'open' command
 # This command is called when current file is not a directory. You may want to
@@ -56,7 +55,7 @@ map a :push %mkdir<space>
 # map r push :rename<space>
 
 # make sure trash folder exists
-# %mkdir -p ~/.trash
+%mkdir -p ~/.trash
 
 # move current file or selected files to trash folder
 # (also see 'man mv' for backup/overwrite options)
@@ -72,7 +71,7 @@ cmd trash %set -f; mv $fx ~/.trash
 # }}
 
 # use '<delete>' key for either 'trash' or 'delete' command
-# map <delete> trash
+map <delete> trash
 # map <delete> delete
 
 # extract the current file with the right command
@@ -105,10 +104,4 @@ cmd zip ${{
     cp -r $fx $1
     zip -r $1.zip $1
     rm -rf $1
-}}
-
-cmd sample ${{
-printf enter
-read ans
-touch $ans
 }}

@@ -11,7 +11,7 @@ yay -S sct xkb-switch-i3 # need this for light package
 sudo usermod -aG video $USER
 
 # hyprland
-sudo pacman -S hyprland cliphist slurp grim swayidle polkit-kde-agent qt5-wayland qt6-wayland wofi blueman waybar foot
+sudo pacman -S hyprland cliphist slurp grim swayidle polkit-kde-agent qt5-wayland qt6-wayland wofi blueman waybar foot swaybg mako
 yay -S satty-bin swaylock-effects-git
 # for wayland there are some must have(which i have added them to list above but for more information):
 # https://wiki.hyprland.org/Useful-Utilities/Must-have/
@@ -24,6 +24,7 @@ zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) 
 chsh -s $(which zsh)
 
 # cli file manager
+sudo pacman -S perl-file-mimeinfo
 yay -S lf
 
 # tmux

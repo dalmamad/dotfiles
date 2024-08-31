@@ -7,23 +7,29 @@ basic:
 	sudo npm install --global yarn
 	yay -S arc-x-icons-theme bashmount
 
-i3wm:
-	sudo pacman -S i3-wm networkmanager network-manager-applet brightnessctl i3status dunst alacritty xclip picom rofi polybar feh maim xdotool xcape blueberry flameshot conky xss-lock xautolock i3lock power-profiles-daemon xfce4-power-manager i3status-rust
+i3wm: alacritty nvim
+	sudo pacman -S i3-wm networkmanager network-manager-applet brightnessctl i3status dunst xclip picom rofi polybar feh maim xdotool xcape blueberry flameshot conky xss-lock xautolock i3lock power-profiles-daemon xfce4-power-manager i3status-rust
 	yay -S sct xkb-switch-i3 betterlockscreen
 	./link-modules.sh "i3wm/i3" "$$HOME/.config"
 	./link-modules.sh "i3wm/picom" "$$HOME/.config"
 	./link-modules.sh "i3wm/rofi" "$$HOME/.config"
 	./link-modules.sh "i3wm/dunst" "$$HOME/.config"
 	./link-modules.sh "i3wm/xprofile/.xprofile" "$$HOME"
-	./link-modules.sh "alacritty/alacritty.toml" "$$HOME/.config"
 
-hypr:
-	sudo pacman -S hyprland cliphist slurp grim swayidle polkit-kde-agent qt5-wayland qt6-wayland wofi blueman waybar foot swaybg mako
+hypr: foot nvim
+	sudo pacman -S hyprland cliphist slurp grim swayidle polkit-kde-agent qt5-wayland qt6-wayland wofi blueman waybar swaybg mako
 	yay -S satty-bin swaylock-effects-git
 	./link-modules.sh "hyprland/hypr" "$$HOME/.config"
 	./link-modules.sh "hyprland/waybar" "$$HOME/.config"
 	./link-modules.sh "hyprland/wofi" "$$HOME/.config"
 	./link-modules.sh "hyprland/mako" "$$HOME/.config"
+
+alacritty:
+	sudo pacman -S alacritty
+	./link-modules.sh "alacritty/alacritty.toml" "$$HOME/.config"
+
+foot:
+	sudo pacman -S foot
 	./link-modules.sh "foot" "$$HOME/.config"
 
 zsh:
@@ -62,9 +68,7 @@ keyd:
 extra:
 	# installing docker
 	sudo pacman -S docker docker-compose
-
 	# installing video player
 	sudo pacman -S vlc
-
 	# installing browser
 	yay -S brave-bin

@@ -1,0 +1,1 @@
+- [ ] adding cmd for listing available devices and mount them with choosing the number. same for unmount and safely removing it

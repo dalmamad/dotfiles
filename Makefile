@@ -1,4 +1,4 @@
-.PHONY: all basic i3wm hypr zsh lf tmux nvim lazygit keyd extra
+.PHONY: all basic wallpaper i3wm hypr zsh lf tmux nvim lazygit keyd extra
 
 all: basic i3wm hypr zsh lf tmux nvim lazygit keyd extra
 
@@ -7,7 +7,10 @@ basic:
 	sudo npm install --global yarn
 	yay -S arc-x-icons-theme bashmount
 
-i3wm: alacritty nvim
+wallpaper:
+	./link-modules.sh "Wallpapers" "$$HOME"
+
+i3wm: wallpaper alacritty nvim
 	sudo pacman -S i3-wm networkmanager network-manager-applet brightnessctl i3status dunst xclip picom rofi polybar feh maim xdotool xcape blueberry flameshot conky xss-lock xautolock i3lock power-profiles-daemon xfce4-power-manager i3status-rust
 	yay -S sct xkb-switch-i3 betterlockscreen
 	./link-modules.sh "i3wm/i3" "$$HOME/.config"
@@ -16,7 +19,7 @@ i3wm: alacritty nvim
 	./link-modules.sh "i3wm/dunst" "$$HOME/.config"
 	./link-modules.sh "i3wm/xprofile/.xprofile" "$$HOME"
 
-hypr: foot nvim
+hypr: wallpaper foot nvim
 	sudo pacman -S hyprland cliphist slurp grim swayidle polkit-kde-agent qt5-wayland qt6-wayland wofi blueman waybar swaybg mako
 	yay -S satty-bin swaylock-effects-git
 	./link-modules.sh "hyprland/hypr" "$$HOME/.config"

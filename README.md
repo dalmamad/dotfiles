@@ -1,6 +1,6 @@
 # Dotfiles
 
-This is my .dotfile repository for both i3wm and hyprland.
+This is my Dotfiles repository which include `i3wm`, `hyprland`, `tmux`, `zsh`, `lf` and some other tools.
 
 ## Hyprland
 
@@ -42,4 +42,18 @@ Or you can install all of them:
 
 ```bash
 make all
+```
+
+4. if you installed any of `i3wm` or `hyprland` you need to set ENV variables for them:
+
+- this is the location of ENV variables for `i3wm`:
+
+```sh
+dotfiles/i3wm/xprofile/.xprofile
+```
+
+- this is the location of ENV variables for `hyprland`:
+
+```sh
+dotfiles/hyprland/hypr/envs.conf
 ```

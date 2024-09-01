@@ -79,10 +79,13 @@ alias f='zi'
 alias g='lazygit'
 alias x='exit'
 alias nv='nvim'
-alias hs='cat ~/.zsh_history 1 | fzf'
+alias hs='cat ~/.zsh_history | fzf | zsh'
 alias btl='bluetoothctl'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
+alias mnt='udisksctl mount -b'
+alias umnt='udisksctl unmount -b'
+alias lb='lsblk -o name,label,size,fsused,type,mountpoints'
 
 # Remarkable
 alias restream='restream -p'

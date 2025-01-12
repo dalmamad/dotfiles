@@ -34,7 +34,7 @@ precmd() { vcs_info }
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})%{$reset_color%}"
 setopt PROMPT_SUBST
-PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+PROMPT='%F{cyan}%*%f %F{white}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 
 
 ################
@@ -85,7 +85,8 @@ alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git
 alias nvimrc='nvim ~/.config/nvim/'
 alias mnt='udisksctl mount -b'
 alias umnt='udisksctl unmount -b'
-alias lb='lsblk -o name,label,size,fsused,type,mountpoints'
+alias lb='lsblk -o name,fstype,label,size,fsused,type,mountpoints'
+alias ls='ls -la'
 
 # Remarkable
 alias restream='restream -p'

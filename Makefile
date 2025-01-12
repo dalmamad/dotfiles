@@ -56,6 +56,7 @@ nvim:
 	sudo pacman -S neovim
 	# golang debuger
 	sudo pacman -S delve
+	mkdir ~/notes
 	./link-modules.sh "nvim" "$$HOME/.config"
 
 lazygit:

@@ -4,9 +4,9 @@ draw_bold_text_with_bright_colors = true
 [colors.normal]
 black = "0x100e23"
 red = "0xff8080"
-green = "0x95ffa4"
+green = "0xA6FAA4"
 yellow = "0xffe9aa"
-blue = "0x91ddff"
+blue = "0x2F37D9"
 magenta = "0x6a8af7"
 cyan = "0xaaffe4"
 white = "0xcbe3e7"

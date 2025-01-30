@@ -12,7 +12,7 @@ wallpaper:
 
 i3wm: wallpaper alacritty nvim
 	sudo pacman -S i3-wm networkmanager network-manager-applet brightnessctl i3status dunst xclip picom rofi polybar feh maim xdotool xcape blueberry flameshot conky xss-lock xautolock i3lock power-profiles-daemon xfce4-power-manager i3status-rust
-	yay -S sct xkb-switch-i3 betterlockscreen
+	yay -S sct xkb-switch-i3 betterlockscreen rofi-greenclip
 	./link-modules.sh "i3wm/i3" "$$HOME/.config"
 	./link-modules.sh "i3wm/picom" "$$HOME/.config"
 	./link-modules.sh "i3wm/rofi" "$$HOME/.config"

@@ -79,7 +79,7 @@ alias f='zi'
 alias g='lazygit'
 alias x='exit'
 alias nv='nvim'
-alias hs='cat ~/.zsh_history | fzf | zsh'
+alias hs='fzf_history'
 alias btl='bluetoothctl'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
@@ -87,6 +87,8 @@ alias mnt='udisksctl mount -b'
 alias umnt='udisksctl unmount -b'
 alias lb='lsblk -o name,fstype,label,size,fsused,type,mountpoints'
 alias ls='ls -la'
+alias do='docker'
+alias dosa='docker stop $(docker ps -q)'
 
 # Remarkable
 alias restream='restream -p'
@@ -136,4 +138,14 @@ esac
 lf () {
     # `command` is needed in case `lfcd` is aliased to `lf`
     cd "$(command lf -print-last-dir "$@")"
+}
+
+fzf_history() {
+  # List your history (without numbers) and pass it to fzf.
+  local cmd
+  cmd=$(fc -l -n 1 | fzf --height=40% --reverse --prompt="History> ")
+  # If a command was selected, push it into the command line buffer.
+  if [[ -n "$cmd" ]]; then
+    print -z "$cmd"
+  fi
 }

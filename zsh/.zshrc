@@ -87,8 +87,11 @@ alias mnt='udisksctl mount -b'
 alias umnt='udisksctl unmount -b'
 alias lb='lsblk -o name,fstype,label,size,fsused,type,mountpoints'
 alias ls='ls -la'
-alias do='docker'
-alias dosa='docker stop $(docker ps -q)'
+#docker
+alias dsa='docker stop $(docker ps -q)'
+alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Networks}}"'
+alias dpsa='docker ps -a'
+alias dlogs='docker logs'
 
 # Remarkable
 alias restream='restream -p'

@@ -38,6 +38,14 @@ PROMPT='%F{cyan}%*%f %F{white}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 
 
 ################
+##### Envs #####
+################
+
+
+export EDITOR=nvim
+export VISUAL=nvim
+
+################
 ##### Keys #####
 ################
 
@@ -92,6 +100,7 @@ alias dsa='docker stop $(docker ps -q)'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Networks}}"'
 alias dpsa='docker ps -a'
 alias dlogs='docker logs'
+alias drma='docker rm $(docker ps -qa)'
 
 # Remarkable
 alias restream='restream -p'
@@ -152,3 +161,15 @@ fzf_history() {
     print -z "$cmd"
   fi
 }
+
+# this will update the zsh title
+set_title() {
+  print -Pn "\e]2;zsh\a"
+}
+precmd_functions+=(set_title)
+set_running_app() {
+  print -Pn "\e]2;${1%% *}\a"
+}
+preexec_functions+=(set_running_app)
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"

@@ -1,6 +1,6 @@
-.PHONY: all basic wallpaper i3wm hypr zsh lf tmux nvim lazygit keyd extra
+.PHONY: all basic wallpaper i3wm hypr zsh lf yazi tmux nvim lazygit keyd extra alacritty
 
-all: basic i3wm hypr zsh lf tmux nvim lazygit keyd extra
+all: basic i3wm hypr zsh lf yazi tmux nvim lazygit keyd extra
 
 basic:
 	sudo pacman -S pipewire wireplumber go sed nodejs npm ripgrep ttf-hack-nerd tidy jq
@@ -10,25 +10,25 @@ basic:
 wallpaper:
 	./link-modules.sh "Wallpapers" "$$HOME"
 
-i3wm: wallpaper alacritty nvim
-	sudo pacman -S i3-wm networkmanager network-manager-applet brightnessctl i3status dunst xclip picom rofi polybar feh maim xdotool xcape blueberry flameshot conky xss-lock xautolock i3lock power-profiles-daemon xfce4-power-manager i3status-rust
-	yay -S sct xkb-switch-i3 betterlockscreen rofi-greenclip
+i3wm: wallpaper alacritty
+	#sudo pacman -S i3-wm networkmanager network-manager-applet brightnessctl i3status dunst xclip picom rofi polybar feh maim xdotool xcape flameshot conky xss-lock i3lock power-profiles-daemon xfce4-power-manager i3status-rust
+	#yay -S sct xkb-switch-i3 betterlockscreen rofi-greenclip
 	./link-modules.sh "i3wm/i3" "$$HOME/.config"
 	./link-modules.sh "i3wm/picom" "$$HOME/.config"
 	./link-modules.sh "i3wm/rofi" "$$HOME/.config"
 	./link-modules.sh "i3wm/dunst" "$$HOME/.config"
 	./link-modules.sh "i3wm/xprofile/.xprofile" "$$HOME"
 
-hypr: wallpaper foot nvim
-	sudo pacman -S hyprland cliphist slurp grim swayidle polkit-kde-agent qt5-wayland qt6-wayland wofi blueman waybar swaybg mako
-	yay -S satty-bin swaylock-effects-git
-	./link-modules.sh "hyprland/hypr" "$$HOME/.config"
-	./link-modules.sh "hyprland/waybar" "$$HOME/.config"
-	./link-modules.sh "hyprland/wofi" "$$HOME/.config"
-	./link-modules.sh "hyprland/mako" "$$HOME/.config"
+#hypr: wallpaper foot nvim
+#	sudo pacman -S hyprland cliphist slurp grim swayidle polkit-kde-agent qt5-wayland qt6-wayland wofi blueman waybar swaybg mako
+#	yay -S satty-bin swaylock-effects-git
+#	./link-modules.sh "hyprland/hypr" "$$HOME/.config"
+#	./link-modules.sh "hyprland/waybar" "$$HOME/.config"
+#	./link-modules.sh "hyprland/wofi" "$$HOME/.config"
+#	./link-modules.sh "hyprland/mako" "$$HOME/.config"
 
 alacritty:
-	sudo pacman -S alacritty
+#	sudo pacman -S alacritty
 	./link-modules.sh "alacritty/alacritty.toml" "$$HOME/.config"
 
 foot:
@@ -36,9 +36,9 @@ foot:
 	./link-modules.sh "foot" "$$HOME/.config"
 
 zsh:
-	sudo pacman -S zsh
-	zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
-	chsh -s $(which zsh)
+#	sudo pacman -S zsh
+#	zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+#	chsh -s $(which zsh)
 	./link-modules.sh "zsh/.zshrc" "$$HOME"
 
 lf:
@@ -46,10 +46,16 @@ lf:
 	yay -S lf
 	./link-modules.sh "lf" "$$HOME/.config"
 
+yazi:
+	sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
+	./link-modules.sh "yazi" "$$HOME/.config"
+	# plugins are vendored, but this restores/updates them from package.toml
+	#ya pkg install
+
 tmux:
-	sudo pacman -S tmux
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-	~/.tmux/plugins/tpm/bin/install_plugins
+	#sudo pacman -S tmux
+	#git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	# ~/.tmux/plugins/tpm/bin/install_plugins
 	./link_modules.sh "tmux/.tmux.conf" "$$HOME"
 
 nvim:

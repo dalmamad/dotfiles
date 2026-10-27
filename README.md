@@ -1,6 +1,6 @@
 # Dotfiles
 
-This is my Dotfiles repository which include `i3wm`, `hyprland`, `tmux`, `zsh`, `lf` and some other tools.
+This is my Dotfiles repository which include `i3wm`, `hyprland`, `tmux`, `zsh`, `lf`, `yazi` and some other tools.
 
 ## Hyprland
 

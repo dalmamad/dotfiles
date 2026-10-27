@@ -87,6 +87,7 @@ alias f='zi'
 alias g='lazygit'
 alias x='exit'
 alias nv='nvim'
+alias fm='y'
 alias hs='fzf_history'
 alias btl='bluetoothctl'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
@@ -173,3 +174,12 @@ set_running_app() {
 preexec_functions+=(set_running_app)
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+function y() {
+	local tmp cwd
+	tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}

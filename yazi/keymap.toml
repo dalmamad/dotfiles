@@ -1,4 +1,10 @@
 [[mgr.prepend_keymap]]
-on  = "M"
-run = "plugin mount"
+on   = "M"
+run  = "plugin mount"
 desc = "Mount manager"
+
+# Enter = `l`: enter the child directory. Open files with `o`.
+[[mgr.prepend_keymap]]
+on   = "<Enter>"
+run  = "enter"
+desc = "Enter the child directory"
